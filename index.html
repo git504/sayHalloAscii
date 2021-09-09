@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Say Hello in ASCII !</title>
+
+		<script type="text/javascript">
+			let sayMyName = "R00t";
+			sayHello = (name) => {
+				let nameStringTrimUpperCaseSplit = name
+					.toString()
+					.trim()
+					.toUpperCase()
+					.split("");
+
+				console.log(nameStringTrimUpperCaseSplit);
+
+				let letters = [];
+				nameStringTrimUpperCaseSplit.forEach((letter) => {
+					letters.push(letter.charCodeAt(0));
+				});
+				console.log(letters);
+				const MY_NAME_ASCII = letters.join(".");
+				alert(`${MY_NAME_ASCII} says Hello 🙂!`);
+			};
+			sayHello();
+		</script>
+	</head>
+	<body>
+		<button onclick="sayHello(sayMyName)">Click Me</button>
+	</body>
+</html>
